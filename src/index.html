@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Public Domain Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .movie {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            padding: 15px;
+        }
+
+        .movie h2 {
+            margin: 0 0 10px 0;
+            color: #007acc;
+        }
+
+        .movie p {
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 360px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Public Domain Movies</h1>
+    <div id="movies-container"></div>
+
+    <script>
+        const publicDomainMovies = [
+            {
+                title: "Night of the Living Dead",
+                description: "A group of people try to survive an attack of bloodthirsty zombies.",
+                embedUrl: "https://archive.org/embed/NightOfTheLivingDead_201709",
+            },
+            {
+                title: "Charade (1963)",
+                description: "A widow is pursued by several men who want a fortune her dead husband stole.",
+                embedUrl: "https://archive.org/embed/Charade1963",
+            },
+            {
+                title: "Plan 9 from Outer Space",
+                description: "Aliens resurrect dead humans to take over the world.",
+                embedUrl: "https://archive.org/embed/Plan9FromOuterSpace_753",
+            }
+        ];
+
+        const container = document.getElementById('movies-container');
+
+        publicDomainMovies.forEach(movie => {
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('movie');
+
+            movieDiv.innerHTML = `
+        <h2>${movie.title}</h2>
+        <p>${movie.description}</p>
+        <iframe src="${movie.embedUrl}" allowfullscreen></iframe>
+      `;
+
+            container.appendChild(movieDiv);
+        });
+    </script>
+</body>
+
+</html>

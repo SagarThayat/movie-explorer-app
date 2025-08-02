@@ -1,0 +1,91 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: linear-gradient(to right, #1c1c2b, #2e3d59);
+  color: #fff;
+}
+
+.App {
+  text-align: center;
+  padding: 1rem;
+}
+
+.App-header {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.App-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #00e0ff;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.search-input {
+  margin-top: 1rem;
+  padding: 0.6rem 1rem;
+  width: 300px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 8px #00e0ff;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: var(--accent);
+  color: black;
+}
+
+.pagination button:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}
+
+.recent-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.recent-tags span {
+  background-color: #ffffff10;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.recent-tags span:hover {
+  background-color: #ffffff30;
+}
