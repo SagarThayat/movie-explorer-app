@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Home from './home'; // You'll move your current search logic here
-import MovieDetails from './component/MovieDetails'; // You'll create this file
+import Home from './home';
+import MovieDetails from './component/MovieDetails';
 
 function App() {
     return (
